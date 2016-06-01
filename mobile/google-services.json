@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "871581740301",
+    "project_id": "spotify-offline-for-wear"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871581740301:android:820b21d78ee93e36",
+        "android_client_info": {
+          "package_name": "renatoprobst.offlinewearforspotify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871581740301-qt29fema7c73jb0nddiceodcog5qde8l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "renatoprobst.offlinewearforspotify",
+            "certificate_hash": "2F567FC1DE6DA90517016C842DD557636FE032E8"
+          }
+        },
+        {
+          "client_id": "871581740301-o3el277mc589h1mh4up6dgpvnrmhcssl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0K3KoxIPA_LhQZcSuPb9EwZ9OAlt2msw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

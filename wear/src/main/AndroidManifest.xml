@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="renatoprobst.offlinewearforspotify">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="renatoprobst.mobileandwear.service.MusicPlayerService"
+            android:enabled="true"
+            android:exported="true">
+            </service>
+        <service
+            android:name=".service.GetTokenService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+
+                <data
+                    android:host="*"
+                    android:path="/get-token-path-wear"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.PlaylistListUserActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".activity.TrackListUserActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".activity.AlbumListUserActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".activity.ArtistListUserActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".activity.PlayerActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light"></activity>
+        <activity
+            android:name=".activity.UserMusicActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".activity.MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+
+        <receiver android:name="renatoprobst.mobileandwear.service.RemoteReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
